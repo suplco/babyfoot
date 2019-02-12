@@ -5,7 +5,9 @@ defmodule BabyfootWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/api", BabyfootWeb do
+  scope "/api/v1/slack", BabyfootWeb.API.V1.Slack do
     pipe_through :api
+
+    post "/commands/hello", CommandsController, :hello
   end
 end

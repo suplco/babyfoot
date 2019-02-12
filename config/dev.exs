@@ -49,8 +49,6 @@ config :phoenix, :plug_init_mode, :runtime
 
 # Configure your database
 config :babyfoot, Babyfoot.Repo,
-  username: "postgres",
-  password: "postgres",
   database: "babyfoot_dev",
   hostname: "localhost",
   pool_size: 10
